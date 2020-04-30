@@ -1,0 +1,162 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The Root Schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "additionalProperties": true,
+    "required": [
+        "bairro",
+        "cidade",
+        "logradouro",
+        "estado_info",
+        "cep",
+        "cidade_info",
+        "estado"
+    ],
+    "properties": {
+        "bairro": {
+            "$id": "#/properties/bairro",
+            "type": "string",
+            "title": "The Bairro Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Vila Rosina"
+            ]
+        },
+        "cidade": {
+            "$id": "#/properties/cidade",
+            "type": "string",
+            "title": "The Cidade Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Caieiras"
+            ]
+        },
+        "logradouro": {
+            "$id": "#/properties/logradouro",
+            "type": "string",
+            "title": "The Logradouro Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Rua Marlene (Sit Aparecida)"
+            ]
+        },
+        "estado_info": {
+            "$id": "#/properties/estado_info",
+            "type": "object",
+            "title": "The Estado_info Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "codigo_ibge": "35",
+                    "area_km2": "248.221,996",
+                    "nome": "São Paulo"
+                }
+            ],
+            "additionalProperties": true,
+            "required": [
+                "area_km2",
+                "codigo_ibge",
+                "nome"
+            ],
+            "properties": {
+                "area_km2": {
+                    "$id": "#/properties/estado_info/properties/area_km2",
+                    "type": "string",
+                    "title": "The Area_km2 Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "248.221,996"
+                    ]
+                },
+                "codigo_ibge": {
+                    "$id": "#/properties/estado_info/properties/codigo_ibge",
+                    "type": "string",
+                    "title": "The Codigo_ibge Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "35"
+                    ]
+                },
+                "nome": {
+                    "$id": "#/properties/estado_info/properties/nome",
+                    "type": "string",
+                    "title": "The Nome Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "São Paulo"
+                    ]
+                }
+            }
+        },
+        "cep": {
+            "$id": "#/properties/cep",
+            "type": "string",
+            "title": "The Cep Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "07748425"
+            ]
+        },
+        "cidade_info": {
+            "$id": "#/properties/cidade_info",
+            "type": "object",
+            "title": "The Cidade_info Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "codigo_ibge": "3509007",
+                    "area_km2": "97,642"
+                }
+            ],
+            "additionalProperties": true,
+            "required": [
+                "area_km2",
+                "codigo_ibge"
+            ],
+            "properties": {
+                "area_km2": {
+                    "$id": "#/properties/cidade_info/properties/area_km2",
+                    "type": "string",
+                    "title": "The Area_km2 Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "97,642"
+                    ]
+                },
+                "codigo_ibge": {
+                    "$id": "#/properties/cidade_info/properties/codigo_ibge",
+                    "type": "string",
+                    "title": "The Codigo_ibge Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "3509007"
+                    ]
+                }
+            }
+        },
+        "estado": {
+            "$id": "#/properties/estado",
+            "type": "string",
+            "title": "The Estado Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "SP"
+            ]
+        }
+    }
+}
